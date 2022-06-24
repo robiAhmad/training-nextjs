@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import "styles/globals.css";
+import LayoutSingleColumn from "@/components/layout/singleColumn";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp(props) {
+    const { Component, pageProps } = props;
+    console.log(props);
+    return (
+        <>
+            <LayoutSingleColumn>
+                <Component {...pageProps} />
+            </LayoutSingleColumn>
+        </>
+    );
 }
 
-export default MyApp
+export default MyApp;
